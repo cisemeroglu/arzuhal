@@ -1,0 +1,23 @@
+
+
+<h1>Arzuhal</h1>
+
+<table>
+<% @articles.each do |article| %>
+    <tr>
+      <td style="text-align: center">
+        <a href="<%=user_url(article.user)%>"><img style="width:128px"   src="assets/kedi<%= article.user.id %>.jpg" ></a>
+      <div><%= article.user.fullname %></div>
+      <%= link_to "show articles", user_articles_url(article.user) %>
+        <div><%=article.created_at%></div>
+
+      </td>
+
+
+      <td><%= article.body %></td>
+
+
+    </tr>
+
+<% end %>
+</table>

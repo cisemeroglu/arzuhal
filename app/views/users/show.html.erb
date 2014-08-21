@@ -1,0 +1,7 @@
+<a href="<%=user_url(@user)%>"><img style="width:128px"   src="../assets/kedi<%= @user.id %>.jpg" ></a>
+<div><%= @user.fullname %></div>
+
+<% @articles.each do |article| %>
+<p><%=article.created_at.strftime("%F %H:%M")%></p>
+<p><%= article.body %></p>
+<% end %>
